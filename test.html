@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.9.1.min.js"></script>
+	</head>
+
+	<body>
+		<select name="opa" id="box" multiple="multiple">
+			<option value="1">html</option>
+			<option value="2">javascript</option>
+			<option value="3">jquery</option>
+			<option value="4">bootstarp</option>
+			<option value="5">angular</option>
+			<option value="6">vue</option>
+			<option value="7">react</option>
+		</select>
+		<script>
+			$('#box').change(function() {
+				function gradeChange() {
+					var objS = document.getElementById("box");
+					var grade = objS.options[objS.selectedIndex].grade;
+					alert(grade);
+				}
+				gradeChange()
+			})
+		</script>
+	</body>
+
+</html>
